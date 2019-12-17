@@ -53,11 +53,22 @@ dark_icon=tk.PhotoImage(file='icons2/dark.png')
 red_icon=tk.PhotoImage(file='icons2/red.png')
 monokai_icon=tk.PhotoImage(file='icons2/monokai.png')
 night_blue_icon=tk.PhotoImage(file='icons2/night_blue.png')
+lavender_icon=tk.PhotoImage(file='icons2/lavender.png')
+baby_blue_icon=tk.PhotoImage(file='icons2/baby_blue.png')
+sky_blue_icon=tk.PhotoImage(file='icons2/sky_blue.png')
+jade_icon=tk.PhotoImage(file='icons2/jade.png')
+sage_icon=tk.PhotoImage(file='icons2/sage.png')
+lemon_icon=tk.PhotoImage(file='icons2/lemon.png')
+bumblebee_icon=tk.PhotoImage(file='icons2/bumblebee.png')
+carmine_icon=tk.PhotoImage(file='icons2/carmine.png')
+sacramento_icon=tk.PhotoImage(file='icons2/sacramento.png')
+azure_icon=tk.PhotoImage(file='icons2/azure.png')
+tuscany_icon=tk.PhotoImage(file='icons2/tuscany.png')
 
 color_theme = tk.Menu(main_menu,tearoff=False)
 #all icons saved in a tuple
 theme_choice = tk.StringVar()
-color_icons = (light_default_icon ,light_plus_icon,dark_icon,red_icon,monokai_icon,night_blue_icon)
+color_icons = (light_default_icon ,light_plus_icon,dark_icon,red_icon,monokai_icon,night_blue_icon,lavender_icon,baby_blue_icon,sky_blue_icon,jade_icon,sage_icon,lemon_icon,bumblebee_icon,carmine_icon,sacramento_icon,azure_icon,tuscany_icon)
 ## text  ,background 
 #  
 color_dict = {
@@ -66,7 +77,18 @@ color_dict = {
     'Dark' : ('#c4c4c4', '#2d2d2d'),
     'Red' : ('#2d2d2d','#ffe8e8'),
     'Monokai' : ('#d3b774','#474747'),
-    'Night Blue' :('#ededed','#6b9dc2')
+    'Night Blue' :('#ededed','#6b9dc2'),
+    'Lavender':('#000000','#C5CAE9'),
+    'Baby Blue':('#000000','#BBDEFB'),
+    'Sky Blue':('#000000','#80DDEA'),
+    'Jade':('#000000','#80CBC4'),
+    'Sage':('#000000','#C5E1A5'),
+    'Lemon':('#000000','#DCE775'),
+    'Bumblebee':('#000000','#FFF59D'),
+    'Carmine':('#FFFFFF','#D81B60'),
+    'Sacramento':('#FFFFFF','#00796B'),
+    'Azure':('#FFFFFF','#1976D2'),
+    'Tuscany':('#FFFFFF','#AFB42B')
 }
 
 
@@ -148,7 +170,7 @@ text_editor = tk.Text(main_application)
 text_editor.config(wrap = 'word', relief=tk.FLAT)
 
 
-scroll_bar = tk.Scrollbar(main_application)
+scroll_bar = tk.Scrollbar(main_application,relief=tk.SUNKEN)
 text_editor.focus_set()
 scroll_bar.pack(side = tk.RIGHT,fill=tk.Y)
 text_editor.pack(fill=tk.BOTH, expand=True)
@@ -270,7 +292,7 @@ text_editor.configure(font=('Arial',12))
 #########    status bar #############
 
 
-status_bar = ttk.Label(main_application, text ='Status Bar')
+status_bar = ttk.Label(main_application, text ='Status Bar',relief=tk.SUNKEN)
 status_bar.pack(side=tk.BOTTOM)
 
 text_changed = False
